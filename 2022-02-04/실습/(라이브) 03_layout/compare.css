@@ -1,0 +1,51 @@
+/* 제목 */
+.title{
+  text-align: center;
+}
+
+.contents{
+  display: block;
+  width: 1000px;
+  position:relative;
+  margin-left: 50px;
+
+}
+/* 버튼 스타일링 및 위치 */
+.button{
+  /* 모양 */
+  display:block;
+  width: 100px;
+  height: 100px;
+  /* 색 */
+  background-color: black;
+  color: white;
+  /* 텍스트 위치 */
+  line-height: 100px;
+  text-align-last: center;
+  /* 원 */
+  border-radius: 50%;
+  /* 위치 */
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.imag{
+  position:relative;
+}
+.imim{
+  width: 100%;
+}
+
+/* top 버튼 */
+.top{
+  background-color: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  position:fixed;
+  bottom: 0;
+  right:0;
+}

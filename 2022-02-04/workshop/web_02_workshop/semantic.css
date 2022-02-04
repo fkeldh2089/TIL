@@ -1,0 +1,104 @@
+/* 아래 코드는 수정하지 마세요. */
+body {
+  font-family: Arial;
+  width: 800px;
+}
+
+section {
+  float: left;
+  margin-left: 4px;
+}
+
+aside { 
+  float: right;
+  margin-right: 4px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 여기서부터 작성하세요. */
+/* 모든 스타일 요소를 ***클래스***로 만들어 작성 후 사용합니다. */
+
+/* 1. article 태그는 white로 나머지 시멘틱 태그는 lightgrey로 배경색을 바꿔주세요. */
+.biggu{
+  background-color: lightgrey;
+}
+.sect{
+  background-color: lightgrey;
+}
+.asi{
+  background-color: lightgrey;
+}
+.art{
+  background-color: white;
+}
+/* 2. header, nav, footer 태그의 margin을 4px로 만들어주세요. */
+.biggu{
+  margin:4px;
+}
+
+/* 3. header, nav, footer 태그의 padding을 4px로 만들어주세요. */
+.biggu{
+  padding:4px;
+
+}
+
+/* 4. h1 태그를 수평 중앙 정렬 시켜주세요. */
+h1{
+  text-align: center;
+}
+
+/* 5. section 태그는 width 490px height 300px, 
+   aside 태그는 width 280px height 300px로 만들어주세요.*/
+.sect{
+  width: 490px;
+  height: 300px;
+}
+
+.asi{
+  width: 280px;
+  height: 300px;
+}
+
+/* 6. 모든 semantic 태그의 border 두께를 1px, 실선, 검은색으로 만들어주세요. */
+
+.biggu{
+  border:1px solid black;
+}
+.sect{
+  border:1px solid black;
+}
+.asi{
+  border:1px solid black;
+}
+.art{
+  border:1px solid black;
+}
+/* 7. 모든 semantic 태그의 border 모서리 반경을 4px로 만들어주세요. */
+.biggu{
+  border-radius:4px;
+}
+.sect{
+  border-radius:4px;
+}
+.asi{
+  border-radius:4px;
+}
+.art{
+  border-radius:4px;
+}
+
+/* 생긴게 이상해서 좀 더 건드려 봅시다. */
+.sect{
+  padding-right: 6px;
+}
+.art{
+  margin:3px;
+}
+.asi{
+  padding-left: 8px;
+}

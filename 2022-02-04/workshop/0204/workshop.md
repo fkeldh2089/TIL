@@ -1,0 +1,40 @@
+1.  Semantic Tag
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="semantic.css">
+  <title>Layout Practice</title>
+</head>
+<body>
+  <header class="gray-f gemar gepad gecen borl bore" >
+    <h1>header</h1>
+  </header>
+  <nav class="gray-f gemar gepad borl bore">
+    <h2>nav</h2>
+  </nav>
+  <div class="clearfix">
+    <section class="gray-f sect borl bore">
+      <h2>section</h2>
+      <article class="white-f borl bore">
+        <h3>article1</h3>
+      </article>
+      <article class="white-f borl bore">
+        <h3>article2</h3>
+      </article>
+    </section>
+    <aside class="gray-f asi borl bore">
+      <h2>aside</h2>
+    </aside>
+  </div>  
+  <footer class="gray-f gemar gepad borl bore">
+    <h2>footer</h2>
+  </footer>
+</body>
+</html>
+
+```
+
