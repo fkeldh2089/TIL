@@ -1,0 +1,120 @@
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <style>
+    .fontwhite{
+      color : white;
+    }
+    .fontcenter{
+      text-align: center;
+    }
+    .headerfont{
+      font-weight: bold;
+    }
+    .headerposition{
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+    .usedskill{
+      display: flex;
+      text-align: center;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .navigationb{
+      justify-content: right;
+    }
+    .navigationa{
+      justify-content: left;
+    }
+    .footerpo{
+      position: fixed;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      bottom:0;
+      background-color: blue;
+    }
+    .hea{
+      position: fixed;
+      top:0;
+      width:100%;
+
+    }
+    .wid{
+      justify-content: space-between;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 1. Nav -->
+  <nav class="navbar navbar-dark bg-dark hea mx-0 wid">
+    <a href="#">
+      <img src="images/logo.png" alt="Logo Image">
+    </a>
+
+    
+    <ul class="nav justify-content-end gap-3">
+      <li class="nav-item ">
+        <a class="nav-link fontwhite" href="#">Home</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link fontwhite" href="#">Community</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link fontwhite" href="#">Login</a>
+      </li>
+    </ul>
+
+  </nav>
+
+  <!-- 2. Header -->
+  <header class="headerposition">
+      <h1 class="display-2 fontwhite headerfont">Cinema</h1>
+      <h1 class="display-2 fontwhite headerfont">Community</h1>
+
+      <div class="col-12 my-5">
+        <button type="submit" class="btn btn-primary">Let's Go</button>
+      </div>
+  </header>
+
+  <!-- 3. Section -->
+  <section>
+    <h2 class="fontcenter">Used Skills</h2>
+    <article class="usedskill">
+      <div>
+        <img src="images/web.png" alt="Web Image">
+        <p>Web</p>
+      </div>
+      <div>
+        <img src="images/html5.png" alt="HTML5 Image">
+        <p>HTML5</p>
+      </div>
+      <div>
+        <img src="images/css3.png" alt="CSS3 Image">
+        <p>CSS3</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 4. Footer -->
+  <footer class="footerpo fontcenter fontwhite bg-primary">
+    <p>HTML & CSS project. Created by Hong</p>
+  </footer>
+</body>
+</html>
+
+```
+
+nav 이외의 요소는 구성하는데 있어 어려움이 있지 않았다. nav의 경우 `div class="content"`를 빼야 로고와 내비게이션 바가 양옆으로 제대로 갈라진다. `div class="content"`가 있는 경우 마진을 없애도 화면 전체 크기로 커지지 않는다. displa형태를 바꾸거나 해야 될것 같은데, 자세한것은 내일 해봐야겠다.
