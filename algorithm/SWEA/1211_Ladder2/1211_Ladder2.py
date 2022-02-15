@@ -19,10 +19,10 @@ for p in range(10):
         if ladder[0][q] == 1:
             x = 0
             y = q
-            if q  < 50:
-                cnt += q
-            else :
-                cnt += (99 - q)
+            # if q  < 50:
+            #     cnt += q
+            # else :
+            #     cnt += (99 - q)
 
             while (x != 99):
                 if y == 0:  # 맨 왼쪽
