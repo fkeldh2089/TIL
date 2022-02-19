@@ -1,0 +1,78 @@
+# 21610 마법사 상어와 비바라기
+import time
+import sys
+sys.stdin = open('input_21610.txt')
+start = time.time()  # 시작 시간 저장
+
+
+# 먼저 구름의 이동부터
+def cloud_move(ds, n, F):  # d는 방향인자, n[r, c]은 구름의 초기좌표, F은 필드의 크기(N)
+    dir_r = [0, -1, -1, -1, 0, 1, 1, 1]
+    dir_c = [-1, -1, 0, 1, 1, 1, 0, -1]
+    pos = n
+    d = ds[0] - 1  # 방향
+    s = ds[1]  # 변위
+    new_pos = [pos[0] + s*dir_r[d], pos[1] + s*dir_c[d]]
+    while not(0 <= new_pos[0] < F) or not(0 <= new_pos[1] < F):
+        if new_pos[0] <= -1:
+            new_pos[0] = F + new_pos[0]
+        if new_pos[1] <= -1:
+            new_pos[1] = F + new_pos[1]
+        if new_pos[0] >= F:
+            new_pos[0] = new_pos[0] - F
+        if new_pos[1] >= F:
+            new_pos[1] = new_pos[1] - F
+    return new_pos
+
+
+# 물복사
+def copy_water(n, F, F_n):  # n은 구름의 좌표, F는 필드에 있는 물량, F_n은 필드의 크기(N)
+    dir_r = [-1, -1, 1, 1]
+    dir_c = [-1, 1, 1, -1]
+    pos = n
+    for p in range(4):  # 대각선 4방향에 대하여
+        new_pos = [pos[0] + dir_r[p], pos[1] + dir_c[p]]
+        if (0 <= new_pos[0] < F_n) and (0 <= new_pos[1] < F_n):  # 대각선이 필드안에 있다면
+            if F[new_pos[0]][new_pos[1]] >= 1:  # 물이 있다면
+                F[pos[0]][pos[1]] += 1  # 물이 증가한다
+    return F
+
+
+def mk_cloud(F, F_n):  # F는 필드, F_n은 필드의 크기(N)
+    clouds = []
+    for p1 in range(F_n):
+        for p2 in range(F_n):
+            if F[p1][p2] >= 2:  # 물이 2이상인 부분 좌표
+                F[p1][p2] -= 2
+                clouds.append([p1, p2])
+    return clouds
+
+
+# N은 필드 크기, M은 구름의 이동
+N, M = list(map(int, input().split()))
+field = [list(map(int, input().split())) for _ in range(N)]
+Move = [list(map(int, input().split())) for _ in range(M)]
+now = [[N-1, 0], [N-1, 1], [N-2, 0], [N-2, 1]]  # 구름의 초기 좌표
+
+for p in range(M):  # 이동 횟수만큼 반복하는 비바라기
+    cloud_count = len(now)  # 구름의 수
+    clouds = []
+    for q in range(cloud_count):  # 구름 수 만큼 반복
+        tmp = cloud_move(Move[p], now[q], N)  # 구름 이동 후 물 증가
+        field[tmp[0]][tmp[1]] += 1
+        clouds.append(cloud_move(Move[p], now[q], N))  # 구름 이동 후 좌표
+    for q in range(cloud_count):
+        field = copy_water(clouds[q], field, N)  # 물 복사 후 필드
+    now = mk_cloud(field, N)
+    for q in range(cloud_count):
+        if clouds[q] in now:
+            field[clouds[q][0]][clouds[q][1]] += 2
+            now.remove(clouds[q])
+
+water = 0
+for p1 in range(N):
+    for p2 in range(N):
+        water += field[p1][p2]
+
+print(water)
+print("time :", time.time() - start)
