@@ -9,7 +9,7 @@ for p in range(TC):
     N, M, K = list(map(int, input().split()))
     peo = list(map(int, input().split()))  # 사람 오는 시간
 
-    # 게임마냥 만들어 봅시다 - 시간 제한 떔에 안될듯
+    # 시간의 흐름에 따라 봅시다 - 시간 제한 떔에 안될듯
     fish_pang = 0  # 붕어빵
     flow_time = 0  # 시간
     ans = 'Possible'

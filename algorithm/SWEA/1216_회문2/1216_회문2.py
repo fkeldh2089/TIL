@@ -1,8 +1,8 @@
-# 1216 회문
+# 1216 회문2
 import sys
 sys.stdin = open('input_1216.txt')
 
-# 1 완전 탐색
+
 def make_word(n, mt):
     words = []
     for q in range(100 - n + 1):
