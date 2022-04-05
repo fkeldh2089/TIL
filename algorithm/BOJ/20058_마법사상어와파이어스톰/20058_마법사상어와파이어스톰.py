@@ -36,7 +36,7 @@ def ice_break(N):  # 얼음 녹이기
 
 
 def ice_mount(N):  # 얼음 덩어리
-    global field
+    global field, cnt1
     dr = [0, 1, 0, -1]
     dc = [-1, 0, 1, 0]
     twice = [[0]*(N) for _ in range(N)]  # 중복 방지
@@ -63,14 +63,18 @@ def ice_mount(N):  # 얼음 덩어리
                         break
                 if max_num < idx1:
                     max_num = idx1
+                if max_num >= cnt1/2:
+                    return max_num
 
     return max_num
 
 
 # N은 필드의 크기 2^N, Qs는 격자의 크기, M은 횟수
-N, M = list(map(int, input().split()))
+N, M = [int(x) for x in sys.stdin.readline().split()]
+# print(N, M)
 N = 2**N
-field = [list(map(int, input().split())) for _ in range(N)]
+field = [[int(x) for x in sys.stdin.readline().split()] for _ in range(N)]
+# print(field)
 if M == 1:
     Q = int(input())
     Qs = [Q]
@@ -83,9 +87,13 @@ for p in range(M):
     ice_break(N)
     # pprint.pprint(field)
 ans = 0
+cnt1 = 0
 for p1 in range(N):
     for p2 in range(N):
-        ans += field[p1][p2]
+        if field[p1][p2] > 0:
+            ans += field[p1][p2]
+        else:
+            cnt1 += 1
 
 max_num = ice_mount(N)
 print(ans)
