@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    const URL = 'https://jsonplaceholder.typicode.com/todos/'
+    
+    axios.get(URL)  // Promise 리턴
+      // .then(res => res.data)
+      // .then(todo => todo.title)
+      // .then(title => console.log( title ))
+      .then(res => console.log(res.data.title))
+      .catch(err => {
+        if (err.response.status === 404) {
+          alert('그딴건 없다.')
+        }
+      })
+      .finally(() => console.log('어쨋든 끝!'))
+
+
+
+    // axios.get(URL)  // Promise 리턴
+    //   .then(res => {
+    //     const todosArray = res.data
+    //     const todo = todosArray.find(todo => todo.id === 10)
+    //     return axios.get(`${URL}${todo.id}`)
+    //   })
+    //   .then(res => console.log(res.data))
+    //   .catch(err => {
+    //     if (err.response.status === 404) {
+    //       alert('그딴건 없다.')
+    //     }
+    //   })
+    //   .finally(() => console.log('어쨋든 끝!'))
+  </script>
+</body>
+</html>
