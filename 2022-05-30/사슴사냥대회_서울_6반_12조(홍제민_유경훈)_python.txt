@@ -1,0 +1,9 @@
+def seoul06_12(opp, turn, opp_prev, opp_last_pattern) :
+    # 사슴과 뱀의 이지선다
+    # 상대가 상대에 맞춰 내는 알고리즘일 경우 상대가 뭘 냈는지 알아도 의미가 없다고 생각
+    # 사슴 한탕주의
+    if turn == 0 or turn == 1:  # 처음 두번은 무조건 사슴만 내구
+        return 0
+    if opp_prev != 0:  # 이 친구가 전 턴에 배신을 했다?
+        return 2  # 뱀이 이득
+    return 0
