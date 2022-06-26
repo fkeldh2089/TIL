@@ -1,0 +1,8 @@
+5 6
+xxxxxx
+x.x...
+x.x..x
+x.x..x
+.xxxxx
+1
+3
