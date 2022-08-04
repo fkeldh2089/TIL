@@ -15,19 +15,27 @@ cd openvidu-tutorials/openvidu-insecure-vue
 npm install
 npm run serve
 ```
+   - 이 때 아래와 같은 에러가 발생한다면,
 
-3) docker 다운로드 및 실행, 아래 코드를 cmd창에 실행
-   
+      ![image-20220804080517141](../../../../AppData/Roaming/Typora/typora-user-images/image-20220804080517141.png)
+
+     `npm install --save --legacy-peer-deps`으로 해결
+
+3. docker 다운로드 및 실행, 아래 코드를 cmd창에 실행
+
    - window의 경우 docker 다운로드 후 lts(?) 2버전 까지 기본 설정 완료해야 함
-   
+
    ```bash
    docker run -p 4443:4443 --rm -e OPENVIDU_SECRET=MY_SECRET openvidu/openvidu-server-kms:2.22.0
    ```
+
 4. localhost로 이동하여 화면 확인
    
    - 만약 화면이 뜨지 않는 다면, docker 서버인 4443포트를 확인할 것, https:라서 보안 문제가 있을 수 있다고 경고창이 뜨는데, 한 번 접속해 두면 정상적으로 동작합니다.
 
 ### 사용방법
+
+: 새로운 환경
 
 1. 비디오 토글, 오디오 토글
    
@@ -84,3 +92,5 @@ toggleVideo(){
             return this.sp
         }
 ```
+
+- 이거 한 사람의 비디오를 중복해서 띄워둘 경우 recursive error 발생, option API 의 경우 해결 가능
