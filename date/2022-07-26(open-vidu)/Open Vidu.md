@@ -94,3 +94,13 @@ toggleVideo(){
 ```
 
 - 이거 한 사람의 비디오를 중복해서 띄워둘 경우 recursive error 발생, option API 의 경우 해결 가능
+
+
+
+
+
+### 과제
+
+1. computed를 이용한 함수들이 recursive하게 동작한다.
+
+2. 미친, 메세지를 보낼때마다 등차수열로 많이 보낸다.
