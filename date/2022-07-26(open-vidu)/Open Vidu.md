@@ -23,7 +23,7 @@ npm run serve
 
 3. docker 다운로드 및 실행, 아래 코드를 cmd창에 실행
 
-   - window의 경우 docker 다운로드 후 lts(?) 2버전 까지 기본 설정 완료해야 함
+   - window의 경우 docker 다운로드 후 무슨 2버전 까지 기본 설정 완료해야 함
 
    ```bash
    docker run -p 4443:4443 --rm -e OPENVIDU_SECRET=MY_SECRET openvidu/openvidu-server-kms:2.22.0
