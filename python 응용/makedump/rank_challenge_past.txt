@@ -1,0 +1,28 @@
+6
+
+| challenge_id | challenge_preset_id | challenge_result_id | challenge_img | challenge_name                   | challenge_topic   | auth_type |
+| ------------ | ------------------- | ------------------- | ------------- | -------------------------------- | ----------------- | --------- |
+| 21           | 1                   | Null                   | Null          | 새로운 시대의 아침이 밝았습니다. | 힘세고 강한 아침  | classifi   |
+| 22           | 2                   | Null                   | Null          | 굳어버린 뇌, 워밍업 하기         | 공부하기          | classifi   |
+| 23           | 3                   | Null                   | Null          | 굳어버린 몸, 활력 불어 넣기      | 운동하기          | classifi   |
+| 24           | 4                   | Null                   | Null          | 홍삼 꾸준히 먹기                 | 하루 한 번 영양제 | feature   |
+| 25           | 5                   | Null                   | Null          | 식이 섬유 섭취                   | 샐러드            | classifi   |
+| 26           | 6                   | Null                   | Null          | 방 청소 하기                     | 청소하기          | feature   |
+
+| start_date | end_date | start_time | end_time | invite_code | reward_content | penalty_content |
+| ---------- | -------- | ---------- | -------- | ----------- | ------ | ------- |
+| 20221001  | 20221031 | 050000     | 070000   | ASLOIMNB   | Null | Null |
+| 20221001   | 20221031 | 070000     | 220000   | AUNKIENW    | Null | Null |
+| 20220901 | 20220930 | 050000     | 220000   | LMKIUTYG  | Null | Null |
+| 20220901 | 20220930 | 000000    | 235900   | LPIUYHNG   | Null | Null |
+| 20220801 | 20220831 | 050000     | 200000   | BNGTYFVD    | Null | Null |
+| 20220801 | 20220831 | 000000    | 235900 | PLOIKJUY    | Null |Null|
+
+| people_cnt | challenge_score | challenge_description                       |
+| --------- | --------------- | --------------------------------------------------------- |
+| 3         | 670             | 맑은 정신이 있다면, 좋은 일을 할 수 있을 것입니다.        |
+| 4         | 1180            | 공부도 해 버릇해야, 잘해진다.                             |
+| 3         | 680             | 운동을 하지 않으면, 몸이 굳어버릴 거에요.                 |
+| 4         | 1020            | 몸이 찬 사람들은 홍삼을 먹는 것이 건강에 좋습니다.        |
+| 3         | 910             | 식이섬유는 꾸준히 먹어줘야 합니다.                        |
+| 3         | 880             | 매일 정리정돈을 한다면, 깔끔한 환경에서 생활할 수 있어요! |

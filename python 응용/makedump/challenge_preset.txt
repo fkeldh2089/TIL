@@ -1,0 +1,10 @@
+6
+
+| challenge_preset_id | preset_img                                                   | preset_topic      | auth_type | start_time | end_time | preset_description                                           | classification_type_id |
+| ------------------- | ------------------------------------------------------------ | ----------------- | --------- | ---------- | -------- | ------------------------------------------------------------ | ---------------------- |
+| 1                   | https://homybk.s3.ap-northeast-2.amazonaws.com/dummyjpg/preset/preset/1.png | 힘세고 강한 아침  | classifi   | 050000     | 070000   | 보람찬 하루를 위해 미라클 모닝에 도전하세요!                 | 1                      |
+| 2                   | https://homybk.s3.ap-northeast-2.amazonaws.com/dummyjpg/preset/preset/2.png | 공부하기          | classifi   | 070000     | 220000   | 자기 개발과 연봉 인상을 위한 역량키우기를 도전해보세요!      | 2                      |
+| 3                   | https://homybk.s3.ap-northeast-2.amazonaws.com/dummyjpg/preset/preset/3.png | 운동하기          | classifi   | 050000     | 220000   | 건강한 생활을 위한 한 걸음 매일 매일 운동한 내용을 인증해보세요! | 3                      |
+| 4                   | https://homybk.s3.ap-northeast-2.amazonaws.com/dummyjpg/preset/preset/4.png | 하루 한 번 영양제 | feature   | 000000     | 235900   | 한 알의 기적                                                 | Null                   |
+| 5                   | https://homybk.s3.ap-northeast-2.amazonaws.com/dummyjpg/preset/preset/5.png | 샐러드            | classifi   | 050000     | 200000   | 매일 한접시를 통해 건강한 자신에게 투자하세요!               | 4                      |
+| 6                   | https://homybk.s3.ap-northeast-2.amazonaws.com/dummyjpg/preset/preset/6.png | 청소하기          | feature   | 000000     | 235900   | 아름다운 사람은 떠난 자리도 아름답습니다!                    | Null                   |

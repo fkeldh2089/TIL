@@ -1,0 +1,22 @@
+4
+
+| challenge_id | challenge_preset_id | challenge_result_id | challenge_img | challenge_name     | challenge_topic | auth_type |
+| ------------ | ------------------- | ------------------- | ------------- | ------------------ | --------------- | --------- |
+| 31           | 5                   | Null                | Null          | 매일 아침 샐러드   | 샐러드          | classifi   |
+| 32           | 5                   | Null                | Null          | 건강 챙기기        | 샐러드          | classifi   |
+| 33           | 5                   | Null                | Null          | 맛있는 샐러드 먹기 | 샐러드          | classifi   |
+| 34           | 5                   | Null                | Null          | 샐러드             | 샐러드          | classifi   |
+
+| start_date | end_date | start_time | end_time | invite_code | reward_content | penalty_content |
+| ---------- | -------- | ---------- | -------- | ----------- | -------------- | --------------- |
+| 20220801   | 20220831 | 050000     | 200000   | ASVOIMNB    | Null           | Null            |
+| 20220801   | 20220831 | 050000     | 200000   | AENKIENW    | Null           | Null            |
+| 20220801   | 20220831 | 050000     | 200000   | LMGHUTYG    | Null           | Null            |
+| 20220801   | 20220831 | 050000     | 200000   | LPIUFHNG    | Null           | Null            |
+
+| people_cnt | challenge_score | challenge_description              |
+| ---------- | --------------- | ---------------------------------- |
+| 4          | 880             | 식이섬유는 꾸준히 먹어줘야 합니다. |
+| 4          | 1180            | 식이섬유는 꾸준히 먹어줘야 합니다. |
+| 4          | 720             | 식이섬유는 꾸준히 먹어줘야 합니다. |
+| 4          | 1020            | 식이섬유는 꾸준히 먹어줘야 합니다. |

@@ -1,0 +1,30 @@
+26
+
+| classification_keyword_id | classification_type_id | keyword        |
+| ------------------------- | ---------------------- | -------------- |
+| 1                         | 1                      | drink          |
+| 2                         | 1                      | glass          |
+| 3                         | 1                      | refreshment    |
+| 4                         | 1                      | H2O            |
+| 5                         | 1                      | bottle         |
+| 6                         | 1                      | inside         |
+| 7                         | 1                      | indoors        |
+| 8                         | 1                      | room           |
+| 9                         | 1                      | furniture      |
+| 10                        | 1                      | window         |
+| 11                        | 2                      | computer       |
+| 12                        | 2                      | laptop         |
+| 13                        | 2                      | office         |
+| 14                        | 2                      | paper          |
+| 15                        | 2                      | written report |
+| 16                        | 2                      | paperwork      |
+| 17                        | 3                      | machine        |
+| 18                        | 3                      | active         |
+| 19                        | 3                      | outdoors       |
+| 20                        | 3                      | sport          |
+| 21                        | 3                      | weight         |
+| 22                        | 3                      | muscle         |
+| 23                        | 3                      | exercise       |
+| 24                        | 4                      | salad          |
+| 25                        | 4                      | vegetable      |
+| 26                        | 4                      | healthy        |

@@ -1,0 +1,6 @@
+2
+
+| badge_id | user_id | type     | grade | challenge_preset_id | created_datetime | badge_flag |
+| -------- | ------- | -------- | ----- | ------------------- | ---------------- | ---------- |
+| 1        | 1       | user     | 1     | Null                | 20221031         | False      |
+| 2        | 1       | ranking5 | 1     | 5                   | 20220831         | True       |

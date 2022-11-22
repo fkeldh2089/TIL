@@ -1,0 +1,16 @@
+2
+
+| challenge_id | challenge_preset_id | challenge_result_id | challenge_img | challenge_name       | challenge_topic | auth_type |
+| ------------ | ------------------- | ------------------- | ------------- | -------------------- | --------------- | --------- |
+| 19           | Null                | Null                | Null          | 식물에 물주기        | 식물 키우기     | none      |
+| 20           | Null                | Null                | Null          | 취업 사이트 살펴보기 | 취업하기        | none      |
+
+| start_date | end_date | start_time | end_time | invite_code | reward_content               | penalty_content |
+| ---------- | -------- | ---------- | -------- | ----------- | ---------------------------- | --------------- |
+| 20221101   | 20221125 | 050000     | 070000   | ADCFSFVG    | 열심히 하면 사탕을 드립니다. | 딱밤            |
+| 20221101   | 20221130 | 050000     | 235900   | ARTHBNJH    | 성취감                       | 인디언 밥       |
+
+| people_cnt | challenge_score | challenge_description             |
+| --------- | --------------- | ----------------------------------------------- |
+| 4         | 720             | 매일매일 식물이 죽지 않도록 물을 주도록 합시다. |
+| 3         | 600             | 취업 사이트는 매일 확인해야 합니다.             |

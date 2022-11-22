@@ -1,0 +1,28 @@
+24
+
+| user_id | auth_code | nickname | profile_img | login_type | user_description                                       | user_score | selected_badge_id | user_flag |
+| ------- | --------- | -------- | ----------- | ---------- | ------------------------------------------------------ | ---------- | ----------------- | --------- |
+| 1       | A         | 바나나킥 | Null        | google     | 안녕하세요,매일 더 나은 삶을 살고자 하는 이도경입니다~ | 1390       | Null              | True      |
+| 2       | A         | 쿠크다스 | Null        | google     | 과자먹고 잘 치웁시다.                                  | 2430       | Null              | True      |
+| 3       | A         | 래핑카우 | Null        | google     | 아침 일찍 일어나는게 너무 힘들어요,,                   | 3690       | Null              | True      |
+| 4       | A         | 햄스터   | Null        | google     | 육식보다는 채식을 합시다                               | 2840       | Null              | True      |
+| 5       | A         | 마우스   | Null        | google     | 보충제를 매일 빼먹지 않고 먹어요                       | 1020       | Null              | True      |
+| 6       | A         | 히말라야 | Null        | google     | 오늘 운동도 잘 되기를,,,                               | 250        | Null              | True      |
+| 7       | A         | 로프반동 | Null        | google     | Null                                                   | 3250       | Null              | True      |
+| 8       | A         | 애덤     | Null        | google     | 정리 정돈                                              | 1240       | Null              | True      |
+| 9       | A         | 홈즈     | Null        | google     | 공부합시다                                             | 8560       | Null              | True      |
+| 10      | A         | 파이쓴   | Null        | google     | 유사언어 파이썬                                        | 4130       | Null              | True      |
+| 11      | A         | 오랭지나 | Null        | google     | 샐러드, 과일, 야채, 채소                               | 7450       | Null              | True      |
+| 12      | A         | 싸피인   | Null        | google     | 화이팅                                                 | 1250       | Null              | True      |
+| 13      | A         | 손세정제 | Null        | google     | 안녕하세요,매일 더 나은 삶을 살고자 하는 이도경입니다~ | 9850       | Null              | True      |
+| 14      | A         | 이도경   | Null        | google     | 과자먹고 잘 치웁시다.                                  | 3250       | Null              | True      |
+| 15      | A         | 마이쮸   | Null        | google     | 아침 일찍 일어나는게 너무 힘들어요,,                   | 4580       | Null              | True      |
+| 16      | A         | 맘모스   | Null        | google     | 육식보다는 채식을 합시다                               | 6970       | Null              | True      |
+| 17      | A         | 비타500  | Null        | google     | 보충제를 매일 빼먹지 않고 먹어요                       | 1240       | Null              | True      |
+| 18      | A         | 코크     | Null        | google     | 오늘 운동도 잘 되기를,,,                               | 1350       | Null              | True      |
+| 19      | A         | 펩시     | Null        | google     | Null                                                   | 3680       | Null              | True      |
+| 20      | A         | 벌즈     | Null        | google     | 정리 정돈                                              | 1070       | Null              | True      |
+| 21      | A         | 삼숭     | Null        | google     | 공부합시다                                             | 1080       | Null              | True      |
+| 22      | A         | 갤럭씌   | Null        | google     | 유사언어 파이썬                                        | 1250       | Null              | True      |
+| 23      | A         | 왓치     | Null        | google     | 샐러드, 과일, 야채, 채소                               | 3600       | Null              | True      |
+| 24      | A         | 알코올   | Null        | google     | 화이팅                                                 | 100        | Null              | True      |

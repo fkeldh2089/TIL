@@ -1,0 +1,16 @@
+2
+
+| challenge_id | challenge_preset_id | challenge_result_id | challenge_img | challenge_name       | challenge_topic | auth_type |
+| ------------ | ------------------- | ------------------- | ------------- | -------------------- | --------------- | --------- |
+| 27           | Null                | Null                   | Null          | 하루 한 번 일기 쓰기 | 일기 쓰기       | none      |
+| 28           | Null                | Null                   | Null          | 새 사진 찍기         | 새 관찰 하기    | none      |
+
+| start_date | end_date | start_time | end_time | invite_code | reward_content   | penalty_content |
+| ---------- | -------- | ---------- | -------- | ----------- | ---------------- | --------------- |
+| 20221001   | 20221031 | 000000     | 235900   | ADCFTLVG    | 서로 박수 쳐주기 | 혼내기          |
+| 20221001   | 20221031 | 050000     | 235900   | ARQKVNJH    | 새밥             | 조장            |
+
+| people_cnt | challenge_score | challenge_description                 |
+| ---------- | --------------- | ------------------------------------- |
+| 2          | 600             | 오늘의 특별한 일은 짧게 기록해 보아요 |
+| 3          | 850             | 저기 날아가는 새 한 마리 찍어봅시다.  |

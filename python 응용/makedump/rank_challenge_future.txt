@@ -1,0 +1,16 @@
+2
+
+| challenge_id | challenge_preset_id | challenge_result_id | challenge_img | challenge_name     | challenge_topic   | auth_type |
+| ------------ | ------------------- | ------------------- | ------------- | ------------------ | ----------------- | --------- |
+| 29           | 4                   | Null                | Null          | 인삼 알약 먹기     | 하루 한 번 영양제 | feature   |
+| 30           | 5                   | Null                | Null          | 토마토 샐러드 먹기 | 샐러드            | classifi   |
+
+| start_date | end_date | start_time | end_time | invite_code | reward_content | penalty_content |
+| ---------- | -------- | ---------- | -------- | ----------- | -------------- | --------------- |
+| 20221201   | 20221231 | 000000     | 235900   | BSLOIMNB    | Null           | Null            |
+| 20221201   | 20221231 | 070000     | 200000   | BUNKIENW    | Null           | Null            |
+
+| people_cnt | challenge_score | challenge_description       |
+| ---------- | --------------- | --------------------------- |
+| 2          | 0               | 인삼은 만병 통치약입니다.   |
+| 1          | 0               | 토마토 샐러드를 먹어봅시다! |

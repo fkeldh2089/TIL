@@ -1,0 +1,8 @@
+4
+
+| classification_type_id | classification_type_name |
+| ---------------------- | ------------------------ |
+| 1                      | Wake_up                  |
+| 2                      | Study                    |
+| 3                      | Exercise                 |
+| 4                      | Salad                    |
