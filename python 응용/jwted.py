@@ -1,6 +1,6 @@
 from jose import JWTError, jwt
 
-SECRET="dyAeHubOOc8KaOfYB6XEQoEj1QzRlVgtjNL8PYs1A1tymZvvqkcEU7L1imkKHeDa"
+SECRET="Secret"
 
 def encodejwt(n):
     json = {'sub': n, 'iss': 'ollenge.com', 'exp': 1768646071, 'iat': 1667350071}

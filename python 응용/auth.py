@@ -1,38 +1,6 @@
 # fast api 및 uvicorn 서버
 from fastapi import FastAPI
 import uvicorn
-# DB 통신 설정, sqlachemy
-# from sqlalchemy import create_engine, Table, MetaData, select
-# from sqlalchemy.orm import sessionmaker
-# from sqlalchemy.orm import declarative_base
-
-# import pymysql
-# from pydantic import BaseModel, HttpUrl
-
-
-# class RecipeBase(BaseModel):
-#     auth_standard_img_id: int
-#     standard_img: HttpUrl
-#     participation_id: int
-
-
-# SQL Enzine 설정
-# SQLALCHEMY_DATABASE_URL = "mysql+pymysql://ollenge:ollenge1010@localhost:3306/ollenge"
-
-# engine = create_engine(
-#     SQLALCHEMY_DATABASE_URL, pool_pre_ping=True, pool_size=15, max_overflow=0, encoding='utf8', convert_unicode=True
-# )
-# metadata_obj = MetaData(bind=engine)
-# SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-# db = SessionLocal()
-# tata = Table("auth_standard_img", metadata_obj, autoload_with=engine)
-# stmt = select(tata)
-# datas = db.execute(stmt)
-# # print(len(datas))
-# for data in datas:
-#     print(1)
-#     print(data.standard_img)
-
 import pymysql
 import os
 
