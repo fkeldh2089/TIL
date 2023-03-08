@@ -98,40 +98,205 @@ OSI 7계층이란, 네트워크 통신이 일어나는 과정을 7단계로 나�
 #### HTTP
 
 - HTTP(Hypertext Transfer Protocol)는 웹의 응용계층의 프로토콜로 client/server형태의 앱의 모델이다.
+- Client가 TCP 연결을 요청하고, Server가 받는 형식
+
+|            non-persistent HTTP            |         persistent HTTP          |
+| :---------------------------------------: | :------------------------------: |
+|          한 번에 하나의 오브젝트          | 하나의 연결에 여러 개의 오브젝트 |
+| 2*RTT+file transmission time (오브젝트당) |                                  |
+|                                           |                                  |
+
+- POST method, GET method를 통해 reqeust를 보낸다.
+
+  | HTTP | - 브라우저                                                   |
+  | ---- | ------------------------------------------------------------ |
+  | 1.0  | - 브라우저 친화적인 프로토콜<br />- GET, HEAD, POST<br />- 모든 요청에 따라 연결을 새로 생성 |
+  | 1.1  | - 자주 사용되는 버전으로, 가상 호스팅, 캐시 등이 추가되어 최적화 및 기능 향상<br />- PUT, DELETE 추가 |
+  | 2.0  | - 1.1과 동일한 API로, 성능향상에 초점을 맞췄다.              |
+
+  ![image-20230308130653382](OSI 7계층.assets/image-20230308130653382.png)
+  
+- caching 과 cookie
 
 #### DNS
 
+- DNS(Domain Name System)은 IP주소와 도메인 이름을 변환해 주는 역할을 한다.
 
+- 분산된 데이터 베이스를 이용한다.
+
+  - 단일 장애점(Single Point of Failure)으로 인한 오류를 방지하기 위해서이다.
+  - 트래픽 양을 조절하기 위해서이다.
+  - 유지보수의 편리함
+
+  ![image-20230308180840360](OSI 7계층.assets/image-20230308180840360.png)
+
+- Root DNS Servers
+
+  - ICANN 이 직접 관리하는 서버
+
+- TLD(top - level domain) Server 
+
+  - 도메인의 가장 마지막 부분
+
+- authoritative DNS servers
+
+  - 실제 개인 도메인과 IP 주소의 관계가 기록 저장 되는 서버
+
+- Recursive DNS Server
+
+  - 인터넷 사용자가 가장 먼저 접근하는 DNS 서버
+  - 데이터를 일정 기간 캐시로 저장하여 효율성을 올린다.
+
+- Attacking DNS
+
+  - DDoS attacks : root 서버를 트래픽으로 폭발 시킨다. 등등
 
 #### CDN
 
-
+- CDN(Content Distrbution Networks)은 비디오와 같은 많은 트래픽이 요구되는 오브젝트를 관리하기 위하여 사용
+- 많은 CDN 노드에 내용을 저장하여 사용자들로 하여금 노드에 request하게끔한다.
 
 #### Client/Server socket interaction : UDP
 
-
+- 클라이언트와 서버 간의 연결이 없다
+- handshaking을 하지 않는다.
+- 순서에 맞지 않고, 데이터가 유실될 수 있다.
 
 #### Client/Server socket interaction : TCP
+
+- 클라이언트와 서버 간의 연결이 필요하다.
+- UDP와 달리 순서와 데이터의 안정성을 보장한다.
 
 
 
 ### 6계층 - 표현계층(Presentation Layer)
 
 - 전송하는 데이터의 표현 방식을 결정
+
 - 파일 인코딩, 명령어를 포장, 압축, 암호화
+
 - JPEF,MPEG, GIF, ASCII
+
+  CBR(constant bit rate) : 고정된 픽셀
+
+  VBR(variable bir rate) : 변화하는 픽셀 
 
 ### 5계층 - 세션 계층(Session Layer)
 
-
+- 데이터가 통신하기 위한 논리적인 연결을 의미한다.
+- Duplex, Half-Duplex, Full Duplex 방식의 통신과 함께 응용 프로세스가 통신을 관리하기 위한 방법을 제공
+- TCP/IP세션을 만들고 없애는 책임을 갖는다.
 
 ### 4계층 - 전송 계층(Transport Layer)
 
+- 다른 호스트에서 일어나는 프로세스 간의 소통을 지원한다.
+- transport protocol은 말단에서 실행된다.(UDP, TCP)
+- 네트워크 계층과의 차이점은,
+  - 네트워크 계층은 호스트 간의 통신을, 전송 계층은 프로세스 간의 통신을 담당하는 것
 
+#### Multiplexing/Demultiplexing
+
+![image-20230308193136552](OSI 7계층.assets/image-20230308193136552.png)
+
+- Multiplexing이란 전송 계층에서 여러 소켓의 데이터들을 처리하는 과정
+
+  - transport header를 추가하여 나중에 Demultiplexing에 사용한다.
+
+- Demultiplexing이란 전송 계층에서 응용계층으로 세그먼트를 올바른 소켓으로 전달하는 것
+
+  - 추가된 헤더를 바탕으로 올바른 소켓에 전달한다.
+  - 호스트는 IP 데이타그램을 받으면, 아래와 같은 하나의 segment를 운반하는데
+
+  ![image-20230308225532874](OSI 7계층.assets/image-20230308225532874.png)
+
+  ​	위와 같이 source port와 destination port를 갖는다. 이를 이용하여 알맞은 소켓에 이동시킨다.
+
+  - Connectionless Demux의 경우 아래와 같이 한 포트로 이동된다.
+
+    ![image-20230308230100288](OSI 7계층.assets/image-20230308230100288.png)
+
+  - Connection oriented Demux의 경우 4개의 정보로 식별한다. (1)(source, dest) (2)(IP, Port)
+
+    ![image-20230308230226065](OSI 7계층.assets/image-20230308230226065.png)
+
+#### UDP(User Datagram Protocol)
+
+- 신뢰성이 낮은 프로토콜로써 완전성을 보증하지 않는다.
+- 가상 회선을 굳이 확립하지 않아도 되며, 유연하고 효율적인 데이터 전송에 사용된다.
+
+- 장점
+
+  - 빠른 요청과 응답이 필요한 실시간 응용에 적합
+    - 통화, 스트리밍 서비스
+  - 여러 다수 지점에 전송 가능(일대 다)
+  - 헤더가 단순하여 코스트가 적다.(8 byte)
+  - DNS, SNMP에 사용
+
+- 극복 방법
+
+  - 응용 계층에서 신뢰성을 어느 정도 회복하도록 설계한다.
+
+  ![image-20230308231452629](OSI 7계층.assets/image-20230308231452629.png)
+
+#### RDT(reliable data transfer)
+
+- 1.0 : 어쩌구 등등
+- 2.0 : ACKs, NAKs
+- 2.1 : ACKs, NAKs 보완
+- 2.2 : ACKs 만 사용(중복되면 NAK와 같다)
+- 3.0 : time out 적용 - time out 적용에 따른 오류가 발생할 수 있다
+
+#### TCP(Transmission Control Protocol)
+
+- 신뢰성(reliable)한 통신을 보장한다.
+
+  - 패킷 손실, 중복 순서 바뀜 등이 없음
+
+- 연결 지향적으로 양단의 프로세스는 TCP가 제공하는 회선을 통해 통신한다.
+
+  ![image-20230308232052784](OSI 7계층.assets/image-20230308232052784.png)
+
+- 수신측에서 송신측으로 하여금 속도를 조절하게하여 flow control을 한다.
+
+- 연결 관리 방법으로는 아래와 같이 hand shake 방식이 있다.
+
+##### 3-way handshake
+
+- 2way의 경우 다음과 같이 오류가 발생할 여지가 많다.
+
+  ![image-20230308232601142](OSI 7계층.assets/image-20230308232601142.png)
+
+- 기본적인 플로우는 다음과 같다.
+
+  Opening
+
+  ![image-20230308232519203](OSI 7계층.assets/image-20230308232519203.png)
+
+  Closing
+
+  ![image-20230308232718847](OSI 7계층.assets/image-20230308232718847.png)
+
+#### Control Congestion
+
+- TCP Slow Start
+
+  처음에는 느리게, 점점 빠르게 통신하다가, loss가 발생한 경우...
+
+- ECN(Explicit Congestion Notification)
+
+  IP 헤더의 두 개의 bit들을 router의 혼잡도를 표기한다.
 
 ### 3계층-네트워크 계층(Network Layer)
 
-
+- 데이터를 목적지까지 빠르고 안전하게 전달하는 라우팅 기능을 수행
+  - 라우터
+- 어떤 기능을 하는가?
+  - 경로를 선택, 경로에 따라 패킷을 전달(routing)
+  - Segmentation/Desegmentation
+  - 오류제어
+  - Internetworking
+  - IP 주소부여
+- 
 
 ### 2계층 - 데이터 링크 계층(Link Layer)
 
@@ -145,6 +310,10 @@ OSI 7계층이란, 네트워크 통신이 일어나는 과정을 7단계로 나�
   - 모든 Host의 NIC(Network Interface Card), Chip에서 실행 된다.
 - 어떻게 실행 되는가?
   - 하드웨어, 소프트웨어, 펌웨어의 조합으로 이루어진다.
+- 대표적인 프로토콜
+  - Point to Point 프로토콜 : HDLC, ADCCP
+  - 근거리 네트워크용 프로토콜 : LLC, ALOHA
+
 
 ### 1계층 -물리 계층 (Physical Layer)
 
